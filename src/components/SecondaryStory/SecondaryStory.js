@@ -45,6 +45,16 @@ const Abstract = styled.p`
   grid-area: abstract;
   font-size: 1rem;
   white-space: pre-wrap;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  /* Necessary for line clamping */
+  overflow: hidden;
+  /* We have done this to prevent the paragraph row from
+    stretching due to the height of the image. Stretch is the
+    default behaviour of a grid child.
+  */
+  align-self: start;
 `;
 
 export default SecondaryStory;
